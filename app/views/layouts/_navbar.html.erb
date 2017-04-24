@@ -38,7 +38,8 @@
                 <li role="separator" class="divider"></li>
               
               <li>
-                <%= link_to 'Edit my profile', user_path(current_user) , method: :put %>
+                <%#= link_to 'Edit my profile', user_path(current_user) , method: :put %>
+                <%= link_to 'Edit my email', edit_user_path(current_user) , method: :get %>
               </li>
               <!-- <li>Logout</li>
               -->

@@ -18,6 +18,15 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
+    
+    
+    if @user.update(user_params)
+      flash[:success] = 'Task は正常に更新されました'
+      redirect_to @user
+    else
+      flash.now[:danger] = 'userは更新されませんでした'
+      render :edit
+    end
   end
 
 
