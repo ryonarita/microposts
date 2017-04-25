@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 #  put 'update/:id', to: 'users#update'
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
+  
+  resources :microposts, only: [:create, :destroy]
 end
